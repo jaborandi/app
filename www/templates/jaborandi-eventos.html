@@ -1,0 +1,54 @@
+	<ion-view view-title=" Eventos" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-eventos" class=" page-eventos">
+					<!-- code refresh -->
+			<ion-refresher pulling-text="{{ 'Puxe para atualizar...' | translate }}"  on-refresh="doRefresh()"></ion-refresher>
+			<!-- ./code refresh -->
+			
+
+			<!-- code search -->
+			<ion-list class="card list" >
+				<div class="item item-input">
+					<i class="icon ion-search placeholder-icon"></i>
+					<input type="search" ng-model="filter_eventoss" placeholder="{{ 'Buscar' | translate }}" aria-label="filter eventoss" />
+				</div>
+			</ion-list>
+			<!-- ./code search -->
+
+			<!-- code listing -->
+			<div class="list animate-none">
+				<div class="" ng-repeat="item in eventoss | filter:filter_eventoss as results" ng-init="$last ? fireEvent() : null" >
+					<div class="card ink ink-dark">
+						<a class="item item-text-wrap" ng-href="#/jaborandi/eventos_singles/{{item.id}}" >
+							<h2  ng-bind-html="item.title.rendered | to_trusted"></h2>
+								<p >
+								<span class="icon ion-android-calendar">{{item.x_metadata.data_e_hora_do_evento}}</span>
+								</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- ./code listing -->
+
+
+			<!-- code infinite scroll -->
+			<ion-list class="list">
+				<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="onInfinite()" distance="5px" ng-if="hasMoreData"></ion-infinite-scroll>
+			</ion-list>
+			<!-- ./code infinite scroll -->
+
+
+			<!-- code search result not found -->
+			<ion-list class="list">
+				<div class="item" ng-if="results.length == 0" >
+					<p>{{ 'Nenhum resultado encontrado...' | translate }}</p>
+				</div>
+			</ion-list>
+			<!-- code search result not found -->
+
+
+
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

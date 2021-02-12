@@ -1,0 +1,39 @@
+	<ion-view view-title=" {{ eventos.title.rendered }}" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-eventos_singles" class="page-eventos_singles">
+					<ion-refresher pulling-text="Puxe para atualizar..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="hero slide-up balanced-bg" style="background-color: #111C1E !important;">
+				<div class="padding-horizontal padding-bottom content content">
+					<h3><a class="light" ng-bind-html="eventos.title.rendered | strHTML">{{ eventos.title.rendered }}</a></h3>
+					<h4 class="light">&nbsp;</h4>
+				</div>
+			</div>
+			<div class="list card">
+
+					<!-- images -->
+					<!-- ./images -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="eventos.content.rendered | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- to_trusted -->
+              		<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="eventos.x_metadata.event_summary | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- text -->
+					<div class="item item-text-wrap"><span class="subdued" ><span class="icon ion-pin"></span> Local: {{eventos.x_metadata.event_location}}</span></div>
+              <div class="item item-text-wrap"><span class="subdued" ><span class="icon ion-calendar"></span> Data: {{eventos.x_metadata.data_e_hora_do_evento}}</span></div>
+					<!-- ./text -->
+
+					<!-- share_link -->
+					<div class="item">
+						<button run-social-sharing message="{{ eventos.x_metadata.compartilha }}" class="button button-small ion-android-share-alt button-outline button-positive icon-left">Compartilhar</button>
+					</div>
+					<!-- ./share_link -->
+			</div>
+			<br/><br/><br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

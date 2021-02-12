@@ -1,0 +1,66 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-nav-bar ng-show="$root.headerExists" id="navbar-right-top" class="page-title bar-balanced">
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+			<ion-nav-buttons side="right">
+				<button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="fabButtonUp"></ion-nav-view>
+		<ion-nav-view animation="none" name="jaborandi-side_menus"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left">
+		<ion-header-bar class="bar-balanced  ">
+			<h1 class="title"><span ng-bind-html="appName | strHTML"></span></h1>
+		</ion-header-bar>
+		<ion-content class="light-bg dark">
+			<ion-list class="list" >
+				<ion-item ng-hide="hide_menu_inicio"  class="menu-inicio item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.inicio">
+					<i class="icon ion-ios-home"></i> {{ "Inicio" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_servicos" class="item item-divider text-left" >
+					 {{ "Serviços" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_empregos"  class="menu-empregos item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.empregos">
+					<i class="icon ion-ios-briefcase"></i> {{ "Empregos" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_solucoes"  class="menu-solucoes item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.solucoes">
+					<i class="icon ion-help-buoy"></i> {{ "Central de Soluções" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_onibus"  class="menu-onibus item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.onibus">
+					<i class="icon ion-android-bus"></i> {{ "Horários de Ônibus" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_telefones"  class="menu-telefones item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.telefones">
+					<i class="icon ion-ios-telephone"></i> {{ "Telefones Úteis" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_informacoes" class="item item-divider text-left" >
+					 {{ "Informações" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_noticias"  class="menu-noticias item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.noticias">
+					<i class="icon ion-ios-paper"></i> {{ "Notícias" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_eventos"  class="menu-eventos item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.eventos">
+					<i class="icon ion-android-calendar"></i> {{ "Agenda do Prefeito" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_secretarias"  class="menu-secretarias item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.secretarias">
+					<i class="icon ion-ios-people"></i> {{ "Secretarias" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_diario"  class="menu-diario item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.diario">
+					<i class="icon ion-compose"></i> {{ "Diário Oficial" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_contato"  class="menu-contato item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.contato">
+					<i class="icon ion-email"></i> {{ "Contato" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_sobre"  class="menu-sobre item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.sobre">
+					<i class="icon ion-information"></i> {{ "Sobre o app" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_imoveis"  class="menu-imoveis item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="jaborandi.imoveis">
+					<i class="icon ion-ios-home"></i> {{ "Imóveis" | translate }}
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,43 @@
+	<ion-view view-title=" {{ imoveis.title.rendered }}" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-imoveis_singles" class="page-imoveis_singles">
+					<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="list ">
+
+					<!-- images -->
+					<div class="item noborder"><img class="full-image" image-lazy-loader="lines" image-lazy-src="{{imoveis.x_featured_media_original}}"   zoom-view="true" zoom-src="{{imoveis.x_featured_media_original}}"/></div>
+					<!-- ./images -->
+
+					<!-- heading-1 -->
+					<h4 style="text-align: center;">  {{imoveis.title.rendered}}</h4>
+					<!-- ./heading-1 -->
+
+					<!-- text -->
+					<div class="item item-text-wrap"><span class="subdued" ><span class="icon ion-android-pin"> {{imoveis.x_metadata.geolocation_street}}, {{imoveis.x_metadata.geolocation_street_number}}</span></span></div>
+					<!-- ./text -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="imoveis.content.rendered | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- text -->
+					<div class="item item-text-wrap"><span class="subdued" ><span class="icon ion-ios-pricetag"><strong> Valor: {{imoveis.x_metadata.preco}}</strong></span></div>
+					<!-- ./text -->
+
+					<!-- share_link -->
+					<div class="item item-text-wrap">
+                      <a class="button button-small button-outline button-positive" ng-href="{{ imoveis.x_metadata._application }}">Falar com Proprietário</a>
+					</div>
+              		<div class="item item-text-wrap">
+                      <a class="button button-small button-outline button-positive" ng-href="https://maps.google.com?q={{ imoveis.x_metadata.geolocation_formatted_address }}">Abrir no mapa</a>
+					</div>
+					<div class="item">
+						<button run-social-sharing message="{{ imoveis.x_metadata.compartilha }}" class="button button-small ion-android-share-alt button-outline button-positive icon-left">Compartilhar</button>
+					</div>
+					<!-- ./share_link -->
+			</div>
+			<br/><br/><br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

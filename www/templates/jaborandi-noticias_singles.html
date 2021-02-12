@@ -1,0 +1,66 @@
+	<ion-view view-title=" {{ noticias.title.rendered }}" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-noticias_singles" class="page-noticias_singles">
+					<ion-refresher pulling-text="Puxe para atualizar..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="list ">
+
+					<!-- images -->
+					<div class="item noborder"><img class="full-image" image-lazy-loader="lines" image-lazy-src="{{noticias.x_featured_media_original}}"   zoom-view="true" zoom-src="{{noticias.x_featured_media_original}}"/></div>
+					<!-- ./images -->
+
+					<!-- heading-1 -->
+					<div class="item item-divider"><h1 ng-bind-html="noticias.title.rendered | to_trusted">{{noticias.title.rendered}}</h1></div>
+					<!-- ./heading-1 -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="noticias.content.rendered | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- text -->
+					<div class="item item-text-wrap"><span class="subdued" ><span class="icon ion-android-calendar">{{noticias.x_date}}</span></span></div>
+					<!-- ./text -->
+
+					<!-- share_link -->
+					<div class="item">
+						<button run-social-sharing message="{{ noticias.x_metadata.compartilha }}" class="button button-small ion-android-share-alt button-outline button-positive icon-left">Compartilhar</button>
+					</div>
+					<!-- ./share_link -->
+
+					<!-- video -->
+					<div class="item noborder" ng-if="noticias.x_metadata.video">
+					<div class="embed_container"><video controls="controls" ng-src="{{noticias.x_metadata.video | trustUrl }}"></video></div>
+					</div>
+					<!-- ./video -->
+
+					<!-- audio -->
+					<div class="item noborder" ng-if="noticias.x_metadata.audio">
+					<audio controls="controls" class="full-image" ng-src="{{noticias.x_metadata.audio | trustUrl }}" ></audio>
+					</div>
+					<!-- ./audio -->
+
+					<!-- ytube -->
+					<div class="item noborder" ng-if="noticias.x_metadata.youtube">
+						<div class="embed_container">
+							<iframe  width="100%" ng-src="{{ 'https://www.youtube.com/embed/' + noticias.x_metadata.youtube + '?enablejsapi=1' | trustUrl }}" frameborder="0" allowfullscreen>
+							</iframe>
+						</div>
+					</div>
+					<!-- ./ytube -->
+
+					<!-- slidebox -->
+					<div class="item item-text-wrap noborder to_trusted">
+					<div class="slideshow_container to_trusted" ng-if="noticias.x_metadata.slider" >
+							<ion-slides options="{slidesPerView:1}" slider="data.slider" class="slideshow">
+								<ion-slide-page class="slideshow-item" ng-repeat="slide_item in noticias.x_metadata.slider | strExplode:'|' track by $index" >
+									<div class="item-text-wrap" ng-bind-html="slide_item | to_trusted"></div>
+								</ion-slide-page>
+							</ion-slides>
+					</div>
+					</div>
+					<!-- ./slidebox -->
+			</div>
+			<br/><br/><br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

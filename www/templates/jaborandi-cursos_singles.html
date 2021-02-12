@@ -1,0 +1,41 @@
+	<ion-view view-title=" {{ cursos.title.rendered }}" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-cursos_singles" class="page-cursos_singles">
+					<ion-refresher pulling-text="Puxe para atualizar..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="list ">
+
+					<!-- images -->
+					<div class="item noborder"><img class="full-image" image-lazy-loader="lines" image-lazy-src="{{cursos.x_featured_media_original}}"   zoom-view="true" zoom-src="{{cursos.x_featured_media_original}}"/></div>
+					<!-- ./images -->
+
+					<!-- heading-1 -->
+					<div class="item item-divider"  ng-bind-html="cursos.title.rendered | to_trusted">{{cursos.title.rendered}}</div>
+					<!-- ./heading-1 -->
+
+					<!-- text -->
+					<div class="item item-text-wrap"><span class="subdued" ><span class="icon ion-android-calendar"> Inscrever-se até: {{cursos.x_metadata.data_limite}}</span></span></div>
+					<!-- ./text -->
+
+					<!-- text -->
+					<div class="item item-text-wrap"><span class="subdued" ><span class="icon ion-android-pin"> Local do curso: {{cursos.meta._job_location}}</span></span></div>
+					<!-- ./text -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="cursos.content.rendered | strHTML"></div>
+					<!-- ./to_trusted -->
+              
+					<div class="item item-text-wrap">
+                      <a class="button button-small ion-ios-briefcase button-outline button-positive icon-left" ng-href="{{ empregos.x_metadata._application }}">Inscrever-se</a>
+					</div>
+              
+					<!-- share_link -->
+					<div class="item">
+						<button run-social-sharing message="{{ cursos.x_metadata.compartilha }}" class="button button-small ion-android-share-alt button-outline button-positive icon-left">Compartilhar</button>
+					</div>
+					<!-- ./share_link -->
+			</div>
+			<br/><br/><br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

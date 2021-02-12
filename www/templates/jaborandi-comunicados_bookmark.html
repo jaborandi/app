@@ -1,0 +1,29 @@
+	<ion-view view-title=" Bookmarks of Comunicados" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-comunicados_bookmark" class="page-comunicados_bookmark">
+		
+    
+<ion-list class="list" ng-if="comunicados_bookmark.length != 0">
+
+	<ion-item class="item item-icon-left" type="item-avatar" ng-repeat="item in comunicados_bookmark" ng-href="#/jaborandi/comunicados_singles/{{ item.id }}">
+		<i class="icon ion-ios-bookmarks-outline"></i>
+		<h2 class="" ng-bind-html="item.title.rendered | to_trusted"></h2>
+		<ion-option-button class="assertive-bg" ng-click="removeDbVirtualComunicados(item.id)"><i class="icon ion-trash-a"></i></ion-option-button>
+	</ion-item>					
+    
+    <ion-item class="item item-button">
+	   <button class="button button-small button-calm" ng-click="clearDbVirtualComunicados();"><i class="icon ion-ios-refresh-outline"></i> Clear</button>
+	</ion-item>
+
+</ion-list>
+
+<div class="comunicados_bookmark padding text-center" ng-if="comunicados_bookmark.length == 0">
+	<i class="icon ion-ios-bookmarks-outline"></i>
+	<p>There are no items</p>
+</div>
+
+    
+    
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

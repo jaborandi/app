@@ -1,0 +1,60 @@
+	<ion-view view-title=" Not&iacute;cias" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-noticias" class=" page-noticias">
+					<!-- code refresh -->
+			<ion-refresher pulling-text="{{ 'Puxe para atualizar...' | translate }}"  on-refresh="doRefresh()"></ion-refresher>
+			<!-- ./code refresh -->
+			
+
+			<!-- code search -->
+			<ion-list class="card list" >
+				<div class="item item-input">
+					<i class="icon ion-search placeholder-icon"></i>
+					<input type="search" ng-model="filter_noticiass" placeholder="Buscar (ex: covid)" aria-label="filter noticiass" />
+				</div>
+			</ion-list>
+			<!-- ./code search -->
+
+			<!-- code listing -->
+			<div class="animate-none">
+				<a ng-href="#/jaborandi/noticias_singles/{{item.id}}"><div class="list card" ng-repeat="item in noticiass | filter:filter_noticiass as results" ng-init="$last ? fireEvent() : null" >
+				<div id="cabecalho" style="background-image: url('{{item.x_featured_media_medium}}') !important; background-repeat: no-repeat; background-size: cover;">
+					<a class="item item-avatar item-text-wrap" ng-href="#/jaborandi/noticias_singles/{{item.id}}">
+								
+                  	
+				</a>
+                  </div>
+                  <a ng-href="#/jaborandi/noticias_singles/{{item.id}}">
+                    <div class="item item-body">
+                      <strong><h2  ng-bind-html="item.title.rendered | to_trusted"></h2></strong>
+						<div class="to_trusted" ng-bind-html="item.excerpt.rendered | limitTo:150:0 | to_trusted"></div>
+					<p>
+								<span class="subdued"><span class="icon ion-android-calendar">  {{item.x_date}}</span>
+					</p>
+                      </div></a>
+				</div>
+			</div>
+			<!-- ./code listing -->
+
+
+			<!-- code infinite scroll -->
+			<ion-list class="list">
+				<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="onInfinite()" distance="5px" ng-if="hasMoreData"></ion-infinite-scroll>
+			</ion-list>
+			<!-- ./code infinite scroll -->
+
+
+			<!-- code search result not found -->
+			<ion-list class="list">
+				<div class="item" ng-if="results.length == 0" >
+					<p>{{ 'Nenhum resultado encontrado...' | translate }}</p>
+				</div>
+			</ion-list>
+			<!-- code search result not found -->
+
+
+
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

@@ -1,0 +1,79 @@
+	<ion-view view-title=" Comunicados" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll scroll="true"   id="page-comunicados" class=" page-comunicados">
+		 
+	
+<!-- code refresh -->
+<ion-refresher pulling-text="Puxe para atualizar"  on-refresh="doRefresh()"></ion-refresher>
+<!-- ./code refresh -->
+
+
+<!-- code search -->
+<ion-list class="card list" >
+	<div class="item item-input">
+		<i class="icon ion-search placeholder-icon"></i>
+		<input type="search" ng-model="filter_posts" placeholder="Buscar" aria-label="filter posts" />
+	</div>
+</ion-list>
+<!-- ./code search -->
+
+<!-- code listing -->
+<div class="list card" ng-repeat="item in comunicadoss | filter:filter_comunicadoss as results" ng-init="$last ? fireEvent() : null" >
+	
+    <a class="item" ng-href="#/jaborandi/comunicados_singles/{{item.id}}">
+        <h2 ng-bind-html="item.title.rendered | to_trusted"></h2>
+        <p>{{item.x_date}}</p>		
+	</a>
+  
+<a class="item" ng-href="#/jaborandi/comunicados_singles/{{item.id}}"> 
+	<div class="item item-body">
+        <img class="full-image" ng-if="item.x_featured_media_medium" alt="" ng-src="{{item.x_featured_media_medium}}" />
+		<p class="to_trusted" ng-bind-html="item.excerpt.rendered | to_trusted"></p>            
+	</div>
+</a>    
+    <a class="item item-icon-left assertive" href="#/jaborandi/comunicados_singles/{{item.id}}">
+        <i class="icon ion-android-more-vertical"></i>
+        Leia Mais
+    </a>
+  
+</div>
+<!-- ./code listing -->
+
+
+<!-- code infinite scroll -->
+<ion-list class="list">
+	<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="onInfinite()" distance="5px" ng-if="hasMoreData"></ion-infinite-scroll>
+</ion-list>
+<!-- ./code infinite scroll -->
+
+
+<!-- code search result not found -->
+<ion-list class="list card" ng-if="results.length == 0">
+	<div class="item">
+		<p>No results found...!</p>
+	</div>
+</ion-list>
+<!-- code search result not found -->
+
+
+<div class="list">
+	<div class="item tabs tabs-secondary tabs-stable">
+		<a class="tab-item" ng-click="updatePaging(false);"><i class="icon ion-chevron-left"></i>Back</a>
+        <span class="tab-item">{{ paging }}</span>
+		<a class="tab-item" ng-click="updatePaging(true);"><i class="icon ion-chevron-right"></i> Next</a>
+	</div>
+</div> 
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

@@ -1,0 +1,86 @@
+	<ion-view view-title=" Jaborandi" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-inicio" class="inicio page-inicio">
+			<div class="slide-box-hero">
+		<ion-slides class="slide-box-hero-content" options="{slidesPerView:1,autoplay:10000,loop:1}" slider="data.slider">
+			<ion-slide-page>
+				<img ng-src="data/images/images/jab1.jpg" class="" />
+			</ion-slide-page>
+			<ion-slide-page>
+				<img ng-src="data/images/images/jab2.jpg" class="" />
+			</ion-slide-page>
+			<ion-slide-page>
+				<img ng-src="data/images/images/jab3.jpg" class="" />
+			</ion-slide-page>
+		</ion-slides>
+	</div>
+	<div style="width: 100%;height:60%;">
+		<ion-slide-box class="ion-slide-tabs" slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+			<ion-slide ion-slide-tab-label="Serviços" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-href="#/jaborandi/empregos" >
+								<i class="icon ion-briefcase" ></i>
+								<h2>Empregos</h2>
+								<span class="item-note pull-left">Vagas de emprego locais</span>
+							</a>                
+                          	<a class="item item-icon-left" ng-href="#/jaborandi/cursos" >
+								<i class="icon ion-easel" ></i>
+								<h2>Cursos</h2>
+								<span class="item-note pull-left">Cursos Gratuitos</span>
+							</a>
+                          	<a class="item item-icon-left" ng-href="#/jaborandi/imoveis" >
+								<i class="icon ion-ios-home" ></i>
+								<h2>Imóveis</h2>
+								<span class="item-note pull-left">Encontre imóveis para alugar ou comprar</span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/jaborandi/solucoes" >
+								<i class="icon ion-help-buoy" ></i>
+								<h2>Central de Solu&ccedil;&otilde;es</h2>
+								<span class="item-note pull-left">Comunique problemas ou sugira ideias</span>
+							</a>                                    
+							<a class="item item-icon-left" ng-href="#/jaborandi/onibus" >
+								<i class="icon ion-android-bus" ></i>
+								<h2>Hor&aacute;rios de &Ocirc;nibus</h2>
+								<span class="item-note pull-left">Hor&aacute;rios de &ocirc;nibus p&uacute;blicos e privados</span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+			<ion-slide ion-slide-tab-label="Informações" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-href="#/jaborandi/noticias" >
+								<i class="icon ion-ios-paper" ></i>
+								<h2>Not&iacute;cias</h2>
+								<span class="item-note pull-left">Not&iacute;cias, artigos e comunicados</span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/jaborandi/eventos" >
+								<i class="icon ion-android-calendar" ></i>
+								<h2>Eventos</h2>
+								<span class="item-note pull-left">Acompanhe os eventos em nossa cidade</span>
+							</a>
+                          	<a class="item item-icon-left" ng-href="#/jaborandi/telefones" >
+								<i class="icon ion-ios-telephone" ></i>
+								<h2>Telefones &Uacute;teis</h2>
+								<span class="item-note pull-left">Contatos dos principais servi&ccedil;os p&uacute;blicos</span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/jaborandi/contato" >
+								<i class="icon ion-email" ></i>
+								<h2>Contato</h2>
+								<span class="item-note pull-left">Fale Conosco</span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/jaborandi/sobre" >
+								<i class="icon ion-information" ></i>
+								<h2>Sobre</h2>
+								<span class="item-note pull-left">Informa&ccedil;&otilde;es sobre este app</span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+		</ion-slide-box>
+	</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

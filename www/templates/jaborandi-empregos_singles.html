@@ -1,0 +1,53 @@
+	<ion-view view-title=" {{ empregos.title.rendered }}" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-empregos_singles" class="page-empregos_singles">
+					<ion-refresher pulling-text="Puxe para atualizar..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="hero slide-up positive-900-bg">
+				<div class="padding-horizontal padding-bottom content content" style="background-image: url('{{empregos.x_featured_media_original}}'); background-repeat: no-repeat; background-size:cover;">
+					<br><br>
+                  <img alt="" class="avatar alinha" ng-src="{{empregos.x_featured_media_original}}" />
+					<h4 class="light">&nbsp;</h4>
+				</div>
+			</div>
+			<div class="list card">
+
+					<!-- images -->
+					<!-- ./images -->
+
+					<!-- heading-1 -->
+					<div class="item item-divider"  ng-bind-html="empregos.title.rendered | to_trusted">{{empregos.title.rendered}}</div>
+					<!-- ./heading-1 -->
+
+					<!-- text -->
+					<div class="item item-text-wrap"><span class="icon ion-android-calendar"><span class="subdued" >  Publicada em:  {{empregos.x_date}}</span></span></div>
+					<!-- ./text -->
+              
+					<!-- text -->
+					<div class="item item-text-wrap"><span class="icon ion-android-calendar"><span class="subdued" >  Candidar-se até:  {{empregos.x_metadata.data_limite}}</span></span></div>
+					<!-- ./text -->
+              
+					<!-- to_trusted -->
+              <div class="item item-text-wrap"><p><strong>Informações:</strong><div class="noborder to_trusted {{ fontsize }}" ng-bind-html="empregos.content.rendered | strHTML"></div></div>
+					<!-- ./to_trusted -->
+
+					<!-- text -->
+					<div class="item item-text-wrap"><span class="subdued" ></span> Localização:<br> {{empregos.x_metadata._job_location}}</span></div>
+					<!-- ./text -->
+
+					<!-- text -->
+					<div class="item item-text-wrap">
+                      <a class="button button-small ion-ios-briefcase button-outline button-positive icon-left" ng-href="{{ empregos.x_metadata._application }}">Candidatar-se</a>
+					</div>
+					<!-- ./text -->
+
+					<!-- share_link -->
+					<div class="item">
+						<button run-social-sharing message="{{ empregos.x_metadata.compartilha }}" class="button button-small ion-android-share-alt button-outline button-positive icon-left">Compartilhar</button>
+					</div>
+					<!-- ./share_link -->
+			</div>
+			<br/><br/><br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

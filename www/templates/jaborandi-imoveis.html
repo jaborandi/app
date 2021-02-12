@@ -1,0 +1,23 @@
+	<ion-view view-title=" Imoveis - {{ paging }}" hide-nav-bar="true" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll scroll="true"  overflow-scroll="true"   id="page-imoveis" class="fullscreen page-imoveis">
+					<!-- code listing -->
+			<ion-slide-box show-pager="true" auto-play="true" pager-click="true" >
+					<ion-slide ng-repeat="item in imoveiss | limitTo : 5:0" style="background: #999  url('{{item.x_featured_media_original}}')  no-repeat center center fixed;;background-size:cover;width:100%;height:100%;background-color:#ddd;" >
+						<div class="padding text-center light">
+							<div class="padding light" style="opacity:0.8;margin-top:80px; background-color:#abab;">
+								<h4 ng-bind-html="item.title.rendered | to_trusted"></h4>
+								<p><span class="icon ion-android-pin"> {{item.x_metadata.geolocation_street}}, {{item.x_metadata.geolocation_street_number}}</span></p>                              	
+								<div ng-bind-html="item.content.rendered | limitTo:50 | to_trusted"></div>
+                             	<h4 ng-bind-html="item.x_metadata.preco | to_trusted"></h4>
+								<a class="button button-colorful" style="background-color: #ffc200 !important;" ng-href="#/jaborandi/imoveis_singles/{{item.id}}" >SAIBA MAIS</a>
+							</div>
+						</div>
+					</ion-slide>
+			</ion-slide-box>
+			<!-- ./code listing -->
+
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
