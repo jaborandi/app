@@ -83,7 +83,7 @@ angular.module("jaborandi", ["ngCordova","ionic","ionMdInput","ionic-material","
 						console.log("onesignal:" + e);
 					}
 				}
-				window.plugins.OneSignal.startInit("1d8bd600-8bc4-40f4-88fb-8192519e8bf7").handleNotificationOpened(notificationOpenedCallback).endInit();
+				window.plugins.OneSignal.startInit("AppID do OneSignal").handleNotificationOpened(notificationOpenedCallback).endInit();
 			}
 
 
