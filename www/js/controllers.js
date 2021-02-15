@@ -739,9 +739,9 @@ $ionicConfig.backButton.text("");
 	
 	
 	// TODO: cursosCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=17";
+	$scope.fetchURL = "https://seusite.com.br/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=17";
 	// TODO: cursosCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=17&callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=17&callback=JSON_CALLBACK";
 	// TODO: cursosCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash( $scope.fetchURL.replace(targetQuery,raplaceWithQuery));
 	
@@ -1057,9 +1057,9 @@ $ionicConfig.backButton.text("");
 	// Retrieving data
 	var itemID = $stateParams.id;
 	// TODO: cursos_singlesCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=17";
+	$scope.fetchURL = "https://seusite.com.br/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=17";
 	// TODO: cursos_singlesCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=17&callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=17&callback=JSON_CALLBACK";
 	// TODO: cursos_singlesCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash($scope.fetchURL);
 	
@@ -1454,9 +1454,9 @@ $ionicConfig.backButton.text("");
 	
 	
 	// TODO: empregosCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=4";
+	$scope.fetchURL = "https://seusite.com.br/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=4";
 	// TODO: empregosCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=4&callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=4&callback=JSON_CALLBACK";
 	// TODO: empregosCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash( $scope.fetchURL.replace(targetQuery,raplaceWithQuery));
 	
@@ -1772,9 +1772,9 @@ $ionicConfig.backButton.text("");
 	// Retrieving data
 	var itemID = $stateParams.id;
 	// TODO: empregos_singlesCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=4";
+	$scope.fetchURL = "https://seusite.com.br/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=4";
 	// TODO: empregos_singlesCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=4&callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br/wp-json/wp/v2/job-listings?per_page=20&page=1&job-types=4&callback=JSON_CALLBACK";
 	// TODO: empregos_singlesCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash($scope.fetchURL);
 	
@@ -2027,9 +2027,9 @@ $ionicConfig.backButton.text("");
 	
 	
 	// TODO: eventosCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba/wp-json/wp/v2/event?per_page=10&tag_ID=10";
+	$scope.fetchURL = "https://seusite.com.br/wp-json/wp/v2/event?per_page=10&tag_ID=10";
 	// TODO: eventosCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba/wp-json/wp/v2/event?per_page=10&tag_ID=10&callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br/wp-json/wp/v2/event?per_page=10&tag_ID=10&callback=JSON_CALLBACK";
 	// TODO: eventosCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash( $scope.fetchURL.replace(targetQuery,raplaceWithQuery));
 	
@@ -2345,9 +2345,9 @@ $ionicConfig.backButton.text("");
 	// Retrieving data
 	var itemID = $stateParams.id;
 	// TODO: eventos_singlesCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba/wp-json/wp/v2/event?per_page=10&tag_ID=10";
+	$scope.fetchURL = "https://seusite.com.br/wp-json/wp/v2/event?per_page=10&tag_ID=10";
 	// TODO: eventos_singlesCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba/wp-json/wp/v2/event?per_page=10&tag_ID=10&callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br/wp-json/wp/v2/event?per_page=10&tag_ID=10&callback=JSON_CALLBACK";
 	// TODO: eventos_singlesCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash($scope.fetchURL);
 	
@@ -2600,9 +2600,9 @@ $ionicConfig.backButton.text("");
 	
 	
 	// TODO: imoveisCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?job-types=75&per_page=10&page=1";
+	$scope.fetchURL = "https://seusite.com.br/wp-json/wp/v2/job-listings?job-types=75&per_page=10&page=1";
 	// TODO: imoveisCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?job-types=75&per_page=10&page=1&callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br/wp-json/wp/v2/job-listings?job-types=75&per_page=10&page=1&callback=JSON_CALLBACK";
 	// TODO: imoveisCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash( $scope.fetchURL.replace(targetQuery,raplaceWithQuery));
 	
@@ -2871,9 +2871,9 @@ $ionicConfig.backButton.text("");
 	// Retrieving data
 	var itemID = $stateParams.id;
 	// TODO: imoveis_singlesCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?job-types=75&per_page=10&page=1";
+	$scope.fetchURL = "https://seusite.com.br/wp-json/wp/v2/job-listings?job-types=75&per_page=10&page=1";
 	// TODO: imoveis_singlesCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba/wp-json/wp/v2/job-listings?job-types=75&per_page=10&page=1&callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br/wp-json/wp/v2/job-listings?job-types=75&per_page=10&page=1&callback=JSON_CALLBACK";
 	// TODO: imoveis_singlesCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash($scope.fetchURL);
 	
@@ -3251,9 +3251,9 @@ $ionicConfig.backButton.text("");
 	
 	
 	// TODO: noticiasCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba/wp-json/wp/v2/posts/?_embed&per_page=12&page=1";
+	$scope.fetchURL = "https://seusite.com.br/wp-json/wp/v2/posts/?_embed&per_page=12&page=1";
 	// TODO: noticiasCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba/wp-json/wp/v2/posts/?_embed&per_page=12&page=1&callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br/wp-json/wp/v2/posts/?_embed&per_page=12&page=1&callback=JSON_CALLBACK";
 	// TODO: noticiasCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash( $scope.fetchURL.replace(targetQuery,raplaceWithQuery));
 	
@@ -3627,9 +3627,9 @@ $ionicConfig.backButton.text("");
 	// Retrieving data
 	var itemID = $stateParams.id;
 	// TODO: noticias_singlesCtrl --|-- $scope.fetchURL
-	$scope.fetchURL = "https://mabus.com.br/pmjaba//wp-json/wp/v2/posts/" + itemID;
+	$scope.fetchURL = "https://seusite.com.br//wp-json/wp/v2/posts/" + itemID;
 	// TODO: noticias_singlesCtrl --|-- $scope.fetchURLp
-	$scope.fetchURLp = "https://mabus.com.br/pmjaba//wp-json/wp/v2/posts/" + itemID + "?callback=JSON_CALLBACK";
+	$scope.fetchURLp = "https://seusite.com.br//wp-json/wp/v2/posts/" + itemID + "?callback=JSON_CALLBACK";
 	// TODO: noticias_singlesCtrl --|-- $scope.hashURL
 	$scope.hashURL = md5.createHash($scope.fetchURL);
 	
