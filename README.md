@@ -35,6 +35,7 @@ Abaixo uma lista dos plugins que deverão constar no seu wordpress.
 |[Very Simple Event List](https://br.wordpress.org/plugins/very-simple-event-list/)          |Listagem para eventos       
 |[WP Job Manager](https://br.wordpress.org/plugins/wp-job-manager/)          |Listagem para empregos e cursos
 |[REST API Helper](https://br.wordpress.org/plugins/rest-api-helper/)          |Reconstrutor de conteúdos lançados pela rest-api
+|[Advanced Custom Fields](https://br.wordpress.org/plugins/advanced-custom-fields/)          |Adicionar campos extras que serão consumidos pelo app
 
 
 ## Editando o aplicativo
