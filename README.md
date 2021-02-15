@@ -1,5 +1,6 @@
 ﻿# Aplicativo oficial de Jaborandi-SP
 ![licença](https://img.shields.io/badge/Licen%C3%A7a-GPLv3-green)  ![framework](https://img.shields.io/badge/Framework-AngularJS-blue)  ![backend](https://img.shields.io/badge/Backend-WordPress-blue)
+
 Aplicativo híbrido desenvolvido com Cordova e utilizando backend em Wordpress. O aplicativo conta com diversas funcionalidades como sistema de notificações, armazenamento sqlite e templates para tratamento de dados. A lista completa de plugins e instruções para compilação do aplicativo estão disponíveis neste markdown.
 
 
@@ -53,9 +54,9 @@ Utilizando o nodejs command prompt, insira estes comandos:
 
     cordova create {nome do projeto} "{nome do pacote, ex: com.exemplo.app}" "{Nome do APP}"
     cd {nome do projeto}
-   
+
    Instale todos os plugins necessários:
-   
+
 
     cordova plugin add cordova-plugin-device --save
     cordova plugin add cordova-plugin-console --save
@@ -82,7 +83,8 @@ Para criar um app iOS:
      cordova build ios
 
  
-    
+
+​    
 
 ## Contribua com o projeto
 
