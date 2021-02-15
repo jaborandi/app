@@ -90,3 +90,5 @@ Para criar um app iOS:
 
 Este projeto é uma iniciativa totalmente opensource totalmente e gratuita, contribuidores e ideias são muito bem vindas!
 Forneceremos o apoio e documentação necessária para que você possa contribuir com esse projeto.
+
+![Licença GPL v3](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)
